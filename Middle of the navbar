@@ -1,0 +1,68 @@
+<div class="custom-navbar-wrapper" style="position: relative; width: 100%; display: block;">
+
+    <div style="position: relative; z-index: 1; width: 100%;">
+        [wpapp_search]
+    </div>
+
+    <div class="custom-icon-group" style="position: absolute; right: 5px; top: 0; bottom: 0; margin: auto; height: 100%; display: flex; align-items: center; gap: 0; z-index: 9999 !important; pointer-events: none;">
+        
+        <div class="icon-item">
+            [voice_search_button]
+        </div>
+        
+        <div class="icon-item">
+            [google_vision_live]
+        </div>
+        
+        <div class="icon-item">
+            [hanzi_popup_trigger]
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    /* --- PHẦN 1: CẤU TRÚC --- */
+
+    /* Đẩy chữ trong ô tìm kiếm sang trái để không đè lên nút */
+    .wpapp-search-input, input[name="s"], input.search-field {
+        padding-right: 120px !important;
+    }
+    
+    /* Reset CSS mặc định của thẻ P trong shortcode */
+    .custom-navbar-wrapper p {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important; /* Dùng flex để căn giữa icon chuẩn hơn */
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Định dạng chung cho các nút */
+    .icon-item {
+        pointer-events: auto; 
+        transform: scale(0.65); /* Thu nhỏ nút một chút */
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 45px; /* Chiều rộng cố định cho mỗi nút để dễ bấm */
+        height: 100%;
+    }
+
+    /* --- PHẦN 2: TÔ MÀU (QUAN TRỌNG) --- */
+
+    /* Cách này dùng bộ lọc để biến icon màu trắng thành màu xám đậm (#555) */
+    .icon-item img, 
+    .icon-item svg,
+    .icon-item i {
+        filter: invert(0.6) sepia(1) saturate(0) hue-rotate(0deg) brightness(0.6) !important;
+        /* Nếu muốn đen tuyền, hãy dùng: filter: invert(1) !important; */
+    }
+
+    /* (Tùy chọn) Hiệu ứng khi di chuột hoặc bấm vào */
+    .icon-item:active {
+        transform: scale(0.75); /* Nhún nhẹ khi bấm */
+        transition: transform 0.1s;
+    }
+</style>
