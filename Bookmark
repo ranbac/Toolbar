@@ -1,0 +1,7 @@
+<div class="custom-right-nav" style="height: 100%; display: flex; align-items: center; justify-content: center; padding-left: 8px;"><a style="display: flex; align-items: center;" href="https://tiengtrungquoc.net/bookmarks/"> <img style="width: 34px; height: 34px;" src="https://tiengtrungquoc.net/wp-content/uploads/2025/10/ribbon1.png" alt="Bookmark" /> </a></div>
+<p><style>
+    .custom-right-nav img:active {
+        transform: scale(0.85); /* Nhún nhẹ khi bấm */
+        transition: transform 0.1s;
+    }
+</style></p>
